@@ -1,0 +1,231 @@
+.experience {
+    width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 150px 2rem 3rem 2rem !important; /* Default padding, overridden by useEffect */
+    background: linear-gradient(135deg, #f5f7fa, #e0e7ee);
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body.dark .experience {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+  }
+  
+  /* Particle Animation Background */
+  .experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  /* Floating Particle Animation */
+  .experience::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 6s infinite;
+    z-index: -1;
+    top: calc(var(--y) * 1%);
+    left: calc(var(--x) * 1%);
+  }
+  
+  /* Multiple particles with varied positions and delays */
+  .experience::after:nth-child(2) {
+    --x: 10;
+    --y: 20;
+    animation-delay: -2s;
+  }
+  
+  .experience::after:nth-child(3) {
+    --x: 30;
+    --y: 50;
+    animation-delay: -4s;
+  }
+  
+  .experience::after:nth-child(4) {
+    --x: 70;
+    --y: 80;
+    animation-delay: -1s;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(15px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+  
+  .experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    color: #00b7ff;
+    border-bottom: 3px solid #00b7ff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  body.dark .experience-title {
+    color: #00d4ff;
+    border-bottom-color: #00d4ff;
+  }
+  
+  .experience-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark .experience-item {
+    background: rgba(40, 40, 40, 0.2);
+  }
+  
+  body.dark .experience-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .experience-header h2 {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+  }
+  
+  body.dark .experience-header h2 {
+    color: #e0e0e0;
+  }
+  
+  .experience-header .company {
+    font-size: 1.2rem;
+    color: #1e3c72;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  
+  body.dark .experience-header .company {
+    color: #d0d0d0;
+  }
+  
+  .experience-header .duration {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+  }
+  
+  body.dark .experience-header .duration {
+    color: #a0a0a0;
+  }
+  
+  .experience-header .location {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  body.dark .experience-header .location {
+    color: #a0a0a0;
+  }
+  
+  .experience-details ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-details ul li {
+    font-size: 1.1rem;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .experience-details ul li:before {
+    content: '✔';
+    color: #00b7ff;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+  }
+  
+  body.dark .experience-details ul li {
+    color: #e0e0e0;
+  }
+  
+  body.dark .experience-details ul li:before {
+    color: #00d4ff;
+  }
+  
+  .skills {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .skill-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    color: #1e3c72;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  body.dark .skill-tag {
+    background: #2a5298;
+    color: #fff;
+  }
+  
+  .skill-tag svg {
+    color: #00b7ff;
+    font-size: 1.2rem;
+  }
+  
+  body.dark .skill-tag svg {
+    color: #00d4ff;
+  }
+  
+  @media (max-width: 768px) {
+    .experience { padding: 1rem; }
+    .experience-title { font-size: 2rem; }
+    .experience-item { padding: 1.5rem; }
+    .experience-header h2 { font-size: 1.5rem; }
+    .experience-header .company { font-size: 1.1rem; }
+    .experience-details ul li { font-size: 1rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .experience-title { font-size: 1.8rem; }
+    .experience-header h2 { font-size: 1.3rem; }
+    .experience-header .company { font-size: 1rem; }
+    .experience-details ul li { font-size: 0.9rem; }
+    .skill-tag { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
+  }

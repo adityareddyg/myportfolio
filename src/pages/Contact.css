@@ -1,0 +1,345 @@
+.contact {
+    width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 150px 2rem 3rem 2rem !important; 
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  body.dark .contact {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+  }
+  
+  /* Profile Section */
+  .profile-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+  }
+  
+  body.dark .profile-container {
+    background: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00b7ff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-name {
+    font-size: 2.5rem;
+    color: #1e3c72;
+    margin: 0.5rem 0;
+    font-weight: 700;
+  }
+  
+  body.dark .profile-name {
+    color: #e0e0e0;
+  }
+  
+  .profile-title {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  body.dark .profile-title {
+    color: #b0b0b0;
+  }
+  
+  /* Background Effects */
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    z-index: -1;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-25px) translateX(20px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+  
+  .contact::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 183, 255, 0.7);
+    border-radius: 50%;
+    animation: float 5s infinite;
+    z-index: -1;
+  }
+  
+  /* Layout */
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto !important;
+  }
+  
+  .contact-header {
+    width: 100%;
+  }
+  
+  .contact-intro {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .intro-text {
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #1e3c72;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+  }
+  
+  body.dark .intro-text {
+    color: #e0e0e0;
+    background: rgba(40, 40, 40, 0.95);
+  }
+  
+  .contact-main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 300px);
+  }
+  
+  .contact-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 700px;
+  }
+  
+  .contact-section {
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+  }
+  
+  .contact-section:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  body.dark .contact-section {
+    background: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-section h3 {
+    font-size: 1.8rem;
+    color: #00b7ff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00b7ff;
+    padding-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+  
+  body.dark .contact-section h3 {
+    color: #00d4ff;
+    border-bottom-color: #00d4ff;
+  }
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    color: #1e3c72;
+    margin: 0;
+  }
+  
+  body.dark .contact-section p {
+    color: #d0d0d0;
+  }
+  
+  .contact-section a {
+    color: #00b7ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  body.dark .contact-section a {
+    color: #00d4ff;
+  }
+  
+  .contact-section a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  body.dark .contact-section a:hover {
+    color: #00b7ff;
+  }
+  
+  /* Social Bar */
+  .social-bar {
+    position: fixed;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+  }
+  
+  body.dark .social-bar {
+    background: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-bar a {
+    color: #00b7ff;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-bar a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+  }
+  
+  body.dark .social-bar a {
+    color: #00d4ff;
+  }
+  
+  body.dark .social-bar a:hover {
+    color: #00b7ff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contact-wrapper {
+      gap: 3rem;
+    }
+  
+    .contact-content {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      padding: 3rem 1.5rem !important;
+    }
+  
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .profile-name {
+      font-size: 2rem;
+    }
+  
+    .intro-text {
+      font-size: 1.2rem;
+      padding: 2rem;
+    }
+  
+    .contact-section {
+      padding: 2rem;
+    }
+  
+    .contact-section h3 {
+      font-size: 1.6rem;
+    }
+  
+    .social-bar {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      top: auto;
+      right: auto;
+      transform: none;
+      margin-top: 2rem;
+      padding: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact {
+      padding: 2rem 1rem !important;
+    }
+  
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .profile-name {
+      font-size: 1.8rem;
+    }
+  
+    .profile-title {
+      font-size: 1rem;
+    }
+  
+    .intro-text {
+      font-size: 1rem;
+      padding: 1.5rem;
+    }
+  
+    .contact-section {
+      padding: 1.5rem;
+    }
+  
+    .contact-section h3 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-section p {
+      font-size: 1rem;
+    }
+  
+    .social-bar a {
+      font-size: 1.3rem;
+    }
+  }
