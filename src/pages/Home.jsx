@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
+
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Social media icons
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import './Home.css';
@@ -77,17 +78,18 @@ const Home = () => {
             animate="visible"
             transition={{ delay: 0.4 }}
           >
-            <Typical
-              className="typewriter"
-              steps={[
-                "I'm a Web Developer with extensive experience for over 5 years.",
-                2000,
-                "My expertise is to create Websites design, graphic design and many more...",
-                2000,
-              ]}
-              loop={Infinity}
-              wrapper="p"
-            />
+           <TypeAnimation
+  className="typewriter"
+  sequence={[
+    "I'm a Web Developer with extensive experience for over 5 years.",
+    2000,
+    "My expertise is to create Websites design, graphic design and many more...",
+    2000,
+  ]}
+  wrapper="p"
+  repeat={Infinity}
+/>
+
           </motion.div>
           <div className="buttons">
             <motion.button
